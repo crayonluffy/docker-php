@@ -1,0 +1,21 @@
+sudo: required
+dist: trusty
+
+services:
+  - docker
+
+env:
+  global:
+    - DOCKER_REPO="oanhnn/php"
+  matrix:
+    - DOCKER_TAG="7.1-cli-alpine"
+    - DOCKER_TAG="7.1-fpm-alpine"
+    - DOCKER_TAG="7.2-cli-alpine"
+    - DOCKER_TAG="7.2-fpm-alpine"
+
+before_script:
+  - docker info
+
+script:
+  - cd $DOCKER_TAG
+  - docker build -t $DOCKER_REPO:$DOCKER_TAG .
