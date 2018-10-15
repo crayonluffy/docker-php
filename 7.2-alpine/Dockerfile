@@ -48,7 +48,6 @@ RUN apk add --update --no-cache \
     php7-redis \
     php7-session \
     php7-simplexml \
-#    php7-soap \
     php7-sodium \
     php7-sqlite3 \
     php7-tokenizer \
