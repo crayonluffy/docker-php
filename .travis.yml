@@ -14,13 +14,8 @@ env:
 
 before_script:
   - docker info
+  - export IMAGE_NAME="$IMAGE_REPO:$IMAGE_TAG" CACHE_TAG="$IMAGE_TAG"
 
 script:
   - cd $IMAGE_TAG
-  - docker pull $IMAGE_REPO:$IMAGE_TAG || true
-  - docker build --cache-from $IMAGE_REPO:$IMAGE_TAG
-                 --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"`
-                 --build-arg VCS_REF=`git rev-parse --short HEAD`
-                 --build-arg VERSION=$IMAGE_TAG
-                 --tag $IMAGE_REPO:$IMAGE_TAG
-                 --pull --compress .
+  - ./hooks/build
