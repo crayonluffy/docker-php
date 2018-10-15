@@ -1,5 +1,18 @@
 FROM php:7.2-fpm-alpine
 
+### Build arguments
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION="7.2-fpm-alpine"
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="My PHP Docker Image" \
+      org.label-schema.description="My PHP Docker Image" \
+      org.label-schema.url="https://github.com/oanhnn/php" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/oanhnn/php.git" \
+      org.label-schema.version=$VERSION \
+      org.label-schema.schema-version="1.0"
+
 # Install some packages
 RUN apk add --update --no-cache curl
 

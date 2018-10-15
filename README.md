@@ -1,11 +1,19 @@
 # oanhnn/docker-php
 
-[![Build Status](https://travis-ci.org/oanhnn/docker-php.svg?branch=master)](https://travis-ci.org/oanhnn/docker-php)
-[![](https://images.microbadger.com/badges/image/oanhnn/php.svg)](https://microbadger.com/images/oanhnn/php)
-[![](https://images.microbadger.com/badges/version/oanhnn/php.svg)](https://microbadger.com/images/oanhnn/php)
-[![](https://images.microbadger.com/badges/commit/oanhnn/php.svg)](https://microbadger.com/images/oanhnn/php)
+## Docker image.
 
-Repository of `oanhnn/php` Docker image.
+Image | Base Image | Badges
+------|------------|------- 
+[`oanhnn/php:7.1-alpine`](https://github.com/oanhnn/docker-php/blob/master/7.1-alpine/Dockerfile) | `alpine:3.7` | [![](https://images.microbadger.com/badges/version/oanhnn/php:7.1-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-alpine) [![](https://images.microbadger.com/badges/image/oanhnn/php:7.1-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-alpine) [![](https://images.microbadger.com/badges/commit/oanhnn/php:7.1-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-alpine)
+[`oanhnn/php:7.2-alpine`](https://github.com/oanhnn/docker-php/blob/master/7.2-alpine/Dockerfile) | `alpine:3.8` | [![](https://images.microbadger.com/badges/version/oanhnn/php:7.2-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-alpine) [![](https://images.microbadger.com/badges/image/oanhnn/php:7.2-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-alpine) [![](https://images.microbadger.com/badges/commit/oanhnn/php:7.2-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-alpine)
+[`oanhnn/php:7.1-cli-alpine`](https://github.com/oanhnn/docker-php/blob/master/7.1-cli-alpine/Dockerfile) | `php:7.1-cli-alpine` | [![](https://images.microbadger.com/badges/version/oanhnn/php:7.1-cli-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-cli-alpine) [![](https://images.microbadger.com/badges/image/oanhnn/php:7.1-cli-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-cli-alpine) [![](https://images.microbadger.com/badges/commit/oanhnn/php:7.1-cli-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-cli-alpine)
+[`oanhnn/php:7.2-cli-alpine`](https://github.com/oanhnn/docker-php/blob/master/7.2-cli-alpine/Dockerfile) | `php:7.2-cli-alpine` | [![](https://images.microbadger.com/badges/version/oanhnn/php:7.2-cli-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-cli-alpine) [![](https://images.microbadger.com/badges/image/oanhnn/php:7.2-cli-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-cli-alpine) [![](https://images.microbadger.com/badges/commit/oanhnn/php:7.2-cli-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-cli-alpine)
+[`oanhnn/php:7.1-fpm-alpine`](https://github.com/oanhnn/docker-php/blob/master/7.1-fpm-alpine/Dockerfile) | `php:7.1-fpm-alpine` | [![](https://images.microbadger.com/badges/version/oanhnn/php:7.1-fpm-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-fpm-alpine) [![](https://images.microbadger.com/badges/image/oanhnn/php:7.1-fpm-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-fpm-alpine) [![](https://images.microbadger.com/badges/commit/oanhnn/php:7.1-fpm-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.1-fpm-alpine)
+[`oanhnn/php:7.2-fpm-alpine`](https://github.com/oanhnn/docker-php/blob/master/7.2-fpm-alpine/Dockerfile) | `php:7.2-fpm-alpine` | [![](https://images.microbadger.com/badges/version/oanhnn/php:7.2-fpm-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-fpm-alpine) [![](https://images.microbadger.com/badges/image/oanhnn/php:7.2-fpm-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-fpm-alpine) [![](https://images.microbadger.com/badges/commit/oanhnn/php:7.2-fpm-alpine.svg)](https://microbadger.com/images/oanhnn/php:7.2-fpm-alpine)
+
+## Build
+
+[![Build Status](https://travis-ci.org/oanhnn/docker-php.svg?branch=master)](https://travis-ci.org/oanhnn/docker-php)
 
 ## Features
 
@@ -15,7 +23,8 @@ Repository of `oanhnn/php` Docker image.
 
 ## Usage
 
-Use like with official image
+- Use like with official image
+- Set environment variable `PHP_ENABLE_XDEBUG=1` to enable XDebug extension
 
 ## Contributing
 
