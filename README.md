@@ -9,7 +9,8 @@ Repository of `oanhnn/php` Docker image.
 
 ## Features
 
-- [x] Base from PHP official image
+- [x] Base from PHP official image (tags: `7.x-cli-alpine`, `7.x-fpm-alpine`)
+- [x] Using packages of Alpine OS (tags: `7.x-alpine`)
 - [x] Install some PHP extensions: bcmath, gd, gmp, intl, opcache, pdo_mysql, pdo_pgsql, pcntl, zip, redis, imagick, xdebug
 
 ## Usage

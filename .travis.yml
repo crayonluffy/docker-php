@@ -9,9 +9,11 @@ env:
     - DOCKER_REPO="oanhnn/php"
   matrix:
     - DOCKER_TAG="7.1-cli-alpine"
-    - DOCKER_TAG="7.1-fpm-alpine"
     - DOCKER_TAG="7.2-cli-alpine"
+    - DOCKER_TAG="7.1-fpm-alpine"
     - DOCKER_TAG="7.2-fpm-alpine"
+    - DOCKER_TAG="7.1-alpine"
+    - DOCKER_TAG="7.2-alpine"
 
 before_script:
   - docker info
