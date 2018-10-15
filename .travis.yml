@@ -1,26 +1,26 @@
-sudo: required
-dist: trusty
-
 services:
   - docker
 
 env:
   global:
-    - DOCKER_REPO="oanhnn/php"
+    - IMAGE_REPO="oanhnn/php"
   matrix:
-    - DOCKER_TAG="7.1-cli-alpine"
-    - DOCKER_TAG="7.2-cli-alpine"
-    - DOCKER_TAG="7.1-fpm-alpine"
-    - DOCKER_TAG="7.2-fpm-alpine"
-    - DOCKER_TAG="7.1-alpine"
-    - DOCKER_TAG="7.2-alpine"
+    - IMAGE_TAG="7.1-cli-alpine"
+    - IMAGE_TAG="7.2-cli-alpine"
+    - IMAGE_TAG="7.1-fpm-alpine"
+    - IMAGE_TAG="7.2-fpm-alpine"
+    - IMAGE_TAG="7.1-alpine"
+    - IMAGE_TAG="7.2-alpine"
 
 before_script:
   - docker info
 
 script:
-  - cd $DOCKER_TAG
-  - docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"`
+  - cd $IMAGE_TAG
+  - docker pull $IMAGE_REPO:$IMAGE_TAG || true
+  - docker build --cache-from $IMAGE_REPO:$IMAGE_TAG
+                 --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"`
                  --build-arg VCS_REF=`git rev-parse --short HEAD`
-                 --build-arg VERSION=$DOCKER_TAG
-                 --tag $DOCKER_REPO:$DOCKER_TAG .
+                 --build-arg VERSION=$IMAGE_TAG
+                 --tag $IMAGE_REPO:$IMAGE_TAG
+                 --pull --compress .
