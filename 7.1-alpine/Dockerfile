@@ -81,5 +81,5 @@ VOLUME /var/www/html
 WORKDIR /var/www/html
 EXPOSE 9000
 
-ENTRYPOINT /usr/local/bin/docker-php-entrypoint
-CMD /usr/sbin/php-fpm -F
+ENTRYPOINT ["/usr/local/bin/docker-php-entrypoint"]
+CMD php-fpm -F
