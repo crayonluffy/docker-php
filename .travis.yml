@@ -3,7 +3,7 @@ services:
 
 env:
   global:
-    - IMAGE_REPO="oanhnn/php"
+    - DOCKER_REPO="oanhnn/php"
   matrix:
     - IMAGE_TAG="7.1-cli-alpine"
     - IMAGE_TAG="7.2-cli-alpine"
@@ -14,8 +14,13 @@ env:
 
 before_script:
   - docker info
-  - export IMAGE_NAME="$IMAGE_REPO:$IMAGE_TAG" CACHE_TAG="$IMAGE_TAG"
 
 script:
   - cd $IMAGE_TAG
-  - ./hooks/build
+  - echo "=> Building the image"
+  - docker pull $DOCKER_REPO:$IMAGE_TAG || true
+  - docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"`
+                 --build-arg VCS_REF=`git rev-parse --short HEAD`
+                 --build-arg VERSION=$IMAGE_TAG
+                 --cache-from $DOCKER_REPO:$IMAGE_TAG
+                 --tag $DOCKER_REPO:$IMAGE_TAG --pull --compress .
