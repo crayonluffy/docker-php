@@ -1,31 +1,16 @@
 FROM alpine:3.8
 
-### Build arguments
-ARG BUILD_DATE
-ARG VCS_REF
-ARG VERSION="7.2-alpine"
-LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="My PHP Docker Image" \
-      org.label-schema.description="My PHP Docker Image" \
-      org.label-schema.url="https://github.com/oanhnn/docker-php" \
-      org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/oanhnn/docker-php.git" \
-      org.label-schema.version=$VERSION \
-      org.label-schema.schema-version="1.0"
-
 ### Global environment variables
 ENV LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8" \
     TIMEZONE="UTC"
 
-### Ensure www-data (ID: 82) user
-RUN set -x ; \
-    addgroup -g 82 -S www-data ; \
-    adduser -u 82 -D -S -G www-data www-data && exit 0 ; exit 1
-
-### Make webroot directory
-RUN mkdir -p /var/www/html/public \
+### Ensure www-data (ID: 82) user and make webroot directory
+RUN set -x \
+ && addgroup -g 82 -S www-data \
+ && adduser -u 82 -D -S -G www-data www-data \
+ && mkdir -p /var/www/html/public \
  && chown -R www-data:www-data /var/www/html/
 
 ### Install php
