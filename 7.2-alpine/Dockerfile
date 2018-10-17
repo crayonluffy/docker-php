@@ -74,11 +74,12 @@ RUN sed -i "s|;*date.timezone =.*|date.timezone=${TIMEZONE}|i" /etc/php/php.ini 
  && sed -i "s|;*post_max_size =.*|post_max_size=${PHP_POST_MAX_SIZE}|i" /etc/php/php.ini
 
 COPY php-fpm.conf /etc/php/php-fpm.conf
-COPY docker-php-entrypoint.sh /usr/local/bin/docker-php-entrypoint
+
+COPY docker-php-entrypoint.sh /usr/local/bin/docker-entrypoint
+ENTRYPOINT ["docker-entrypoint"]
 
 VOLUME /var/www/html
 WORKDIR /var/www/html
 EXPOSE 9000
 
-ENTRYPOINT ["/usr/local/bin/docker-php-entrypoint"]
-CMD php-fpm -F
+CMD ["php-fpm", "-F"]
