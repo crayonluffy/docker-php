@@ -14,7 +14,7 @@ RUN mkdir -p /etc/supervisor.d /var/log/supervisord \
  && sed -i "s|;*childlogdir=.*|childlogdir=/var/log/supervisord|i" /etc/supervisord.conf
 
 #### Copy supervisor program's config files
-COPY ../supervisor.d /etc/supervisor.d
+COPY supervisor.d /etc/supervisor.d
 
 #### Entrypoint
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint
