@@ -7,6 +7,7 @@ export BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
 
 docker pull $IMAGE_NAME || true
 docker build --cache-from $IMAGE_NAME \
+             --compress \
              --label "org.label-schema.build-date=$BUILD_DATE" \
              --label "org.label-schema.name='The PHP Docker Image'" \
              --label "org.label-schema.description='The PHP Docker Image'" \
@@ -15,5 +16,5 @@ docker build --cache-from $IMAGE_NAME \
              --label "org.label-schema.vcs-ref=$VCS_REF" \
              --label "org.label-schema.version=$BUILD_VERSION" \
              --label "org.label-schema.schema-version=1.0" \
-             --tag $IMAGE_NAME \
-             --compress --pull .
+             --pull \
+             --tag $IMAGE_NAME .
