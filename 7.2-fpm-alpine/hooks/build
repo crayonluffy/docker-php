@@ -2,7 +2,7 @@
 
 echo "=> Building the image $IMAGE_NAME"
 export BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
-       BUILD_VERSION=$CACHE_TAG \
+       BUILD_VERSION=${IMAGE_NAME:11} \
        VCS_REF=`git rev-parse --short HEAD`
 
 docker pull $IMAGE_NAME || true

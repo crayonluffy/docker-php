@@ -17,8 +17,6 @@ env:
 before_script:
   - docker info
   - export IMAGE_NAME="oanhnn/php:${VERSION}-${VARIANT}"
-  - export IMAGE_TAG="${VERSION}-${VARIANT}"
-  - export CACHE_TAG="${VERSION}-${VARIANT}"
 
 script:
   - cd $IMAGE_TAG
