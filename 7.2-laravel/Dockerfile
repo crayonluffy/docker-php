@@ -20,4 +20,4 @@ COPY supervisor.d /etc/supervisor.d
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 ENTRYPOINT ["docker-entrypoint"]
 
-CMD ["supervisord", "-n", "-c /etc/supervisord.conf"]
+CMD supervisord -n -c /etc/supervisord.conf
