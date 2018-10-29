@@ -19,5 +19,5 @@ before_script:
   - export IMAGE_NAME="oanhnn/php:${VERSION}-${VARIANT}"
 
 script:
-  - cd $IMAGE_TAG
+  - cd ${VERSION}-${VARIANT}
   - ./hooks/build
