@@ -6,6 +6,7 @@ directory=/var/www/html
 command=php artisan horizon
 autostart=true
 autorestart=true
+priority=45
 user=www-data
 numprocs=1
 redirect_stderr=false

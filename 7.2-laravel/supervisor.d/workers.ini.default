@@ -6,6 +6,7 @@ directory=/var/www/html
 command=php artisan queue:work redis --sleep=3
 autostart=true
 autorestart=true
+priority=46
 user=www-data
 numprocs=5
 redirect_stderr=false

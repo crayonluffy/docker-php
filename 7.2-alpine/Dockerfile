@@ -10,8 +10,8 @@ ENV LANG="en_US.UTF-8" \
 RUN set -x \
  && addgroup -g 82 -S www-data \
  && adduser -u 82 -D -S -G www-data www-data \
- && mkdir -p /var/www/html/public \
- && chown -R www-data:www-data /var/www/html/
+ && mkdir -p /var/www/html \
+ && chown -R www-data:www-data /var/www/html
 
 ### Install php
 RUN apk add --update --no-cache \
