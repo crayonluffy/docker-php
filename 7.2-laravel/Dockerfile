@@ -91,7 +91,7 @@ COPY cronjobs.conf      /etc/www-data-cronjobs
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint
 ENTRYPOINT ["docker-entrypoint"]
 
-VOLUME /var/www/html
+#VOLUME /var/www/html
 WORKDIR /var/www/html
 EXPOSE 80
 
