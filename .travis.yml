@@ -13,6 +13,10 @@ env:
     - VERSION=7.2 VARIANT=fpm-alpine
     - VERSION=7.2 VARIANT=alpine
     - VERSION=7.2 VARIANT=laravel
+    - VERSION=7.3 VARIANT=cli-alpine
+    - VERSION=7.3 VARIANT=fpm-alpine
+#    - VERSION=7.3 VARIANT=alpine
+#    - VERSION=7.3 VARIANT=laravel
 
 before_script:
   - docker info
