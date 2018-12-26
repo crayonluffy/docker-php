@@ -13,6 +13,7 @@ RUN apk add --update --no-cache --virtual .build-deps \
         libjpeg-turbo-dev \
         libpng-dev \
         libxml2-dev \
+        libzip-dev \
         postgresql-dev \
         zlib-dev \
         $PHPIZE_DEPS
@@ -31,6 +32,7 @@ RUN docker-php-ext-configure gd \
         pdo_mysql \
         pdo_pgsql \
         pcntl \
+        sockets \
         zip
 
 # Install some extentions via PECL channels
@@ -38,7 +40,6 @@ RUN pecl update-channels \
  && pecl install \
         imagick \
         redis \
-        xdebug \
  && docker-php-ext-enable imagick redis \
  && rm -rf /tmp/pear ~/.pearrc
 
