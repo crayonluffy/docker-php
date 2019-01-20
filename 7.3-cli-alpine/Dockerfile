@@ -40,9 +40,11 @@ RUN pecl update-channels \
  && pecl install \
         imagick \
         redis \
- && docker-php-ext-enable imagick redis \
+        swoole \
+ && docker-php-ext-enable imagick redis swoole \
  && rm -rf /tmp/pear ~/.pearrc
 
+# Install runtime libraries and cleanup
 RUN runDeps="$( \
 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
 			| tr ',' '\n' \
@@ -52,13 +54,7 @@ RUN runDeps="$( \
  && apk add --update --no-cache --virtual .run-deps $runDeps \
  && apk del .build-deps
 
-# Environment variable for PHP settings
-ENV PHP_MEMORY_LIMIT="500M" \
-    PHP_TIMEZONE="UTC"
+# Modify docker entrypoint
+COPY docker-php-entrypoint docker-php-ext-disable /usr/local/bin/
 
-# Settings PHP
-RUN echo "display_errors=stderr"                      >  $PHP_INI_DIR/php.ini \
- && echo "expose_php=0"                               >> $PHP_INI_DIR/php.ini \
- && echo "memory_limit=${PHP_MEMORY_LIMIT}"           >> $PHP_INI_DIR/php.ini \
- && echo "max_execution_time=900"                     >> $PHP_INI_DIR/php.ini \
- && echo "date.timezone=${PHP_TIMEZONE:-UTC}"         >> $PHP_INI_DIR/php.ini
+ENTRYPOINT [ "docker-php-entrypoint" ]
