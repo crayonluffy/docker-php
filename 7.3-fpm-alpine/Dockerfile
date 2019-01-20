@@ -55,6 +55,6 @@ RUN runDeps="$( \
  && apk del .build-deps
 
 # Modify docker entrypoint and healthcheck
-COPY docker-php-entrypoint docker-php-ext-disable /usr/local/bin/
+COPY docker-php-* /usr/local/bin/
 
 ENTRYPOINT [ "docker-php-entrypoint" ]
