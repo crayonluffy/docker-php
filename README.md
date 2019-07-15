@@ -5,60 +5,61 @@
 <table>
   <tr>
     <th>PHP Version</th>
-    <th colspan="2">Docker Tags</th>
+    <th>CLI - Alpine</th>
+    <th>FPM - Alpine</th>
   </tr>
   <tr>
     <td>7.0</td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.0-cli-alpine" title="7.0-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.0-cli-alpine.svg" alt="7.0-cli-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.0-cli-alpine" title="7.0-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.0-cli-alpine.svg" alt="7.0-cli-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.0-cli-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.0-cli-alpine" alt="7.0-cli-alpine"/></a>
     </td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.0-fpm-alpine" title="7.0-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.0-fpm-alpine.svg" alt="7.0-fpm-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.0-fpm-alpine" title="7.0-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.0-fpm-alpine.svg" alt="7.0-fpm-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.0-fpm-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.0-fpm-alpine" alt="7.0-fpm-alpine"/></a>
     </td>
   </tr>
   <tr>
     <td>7.1</td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.1-cli-alpine" title="7.1-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.1-cli-alpine.svg" alt="7.1-cli-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.1-cli-alpine" title="7.1-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.1-cli-alpine.svg" alt="7.1-cli-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.1-cli-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.1-cli-alpine" alt="7.1-cli-alpine"/></a>
     </td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.1-fpm-alpine" title="7.1-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.1-fpm-alpine.svg" alt="7.1-fpm-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.1-fpm-alpine" title="7.1-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.1-fpm-alpine.svg" alt="7.1-fpm-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.1-fpm-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.1-fpm-alpine" alt="7.1-fpm-alpine"/></a>
     </td>
   </tr>
   <tr>
     <td>7.2</td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.2-cli-alpine" title="7.2-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.2-cli-alpine.svg" alt="7.2-cli-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.2-cli-alpine" title="7.2-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.2-cli-alpine.svg" alt="7.2-cli-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.2-cli-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.2-cli-alpine" alt="7.2-cli-alpine"/></a>
     </td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.2-fpm-alpine" title="7.2-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.2-fpm-alpine.svg" alt="7.2-fpm-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.2-fpm-alpine" title="7.2-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.2-fpm-alpine.svg" alt="7.2-fpm-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.2-fpm-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.2-fpm-alpine" alt="7.2-fpm-alpine"/></a>
     </td>
   </tr>
   <tr>
     <td>7.3</td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.3-cli-alpine" title="7.3-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.3-cli-alpine.svg" alt="7.3-cli-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.3-cli-alpine" title="7.3-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.3-cli-alpine.svg" alt="7.3-cli-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.3-cli-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.3-cli-alpine" alt="7.3-cli-alpine"/></a>
     </td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.3-fpm-alpine" title="7.3-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.3-fpm-alpine.svg" alt="7.3-fpm-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.3-fpm-alpine" title="7.3-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.3-fpm-alpine.svg" alt="7.3-fpm-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.3-fpm-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.3-fpm-alpine" alt="7.3-fpm-alpine"/></a>
     </td>
   </tr>
   <tr>
     <td>7.4</td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.4-cli-alpine" title="7.4-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.4-cli-alpine.svg" alt="7.4-cli-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.4-cli-alpine" title="7.4-cli-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.4-cli-alpine.svg" alt="7.4-cli-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.4-cli-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.4-cli-alpine" alt="7.4-cli-alpine"/></a>
     </td>
     <td>
-      <a href="https://microbadger.com/images/oanhnn/php:7.4-fpm-alpine" title="7.4-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.4-fpm-alpine.svg" alt="7.4-fpm-alpine"/></a><br>
+      <a href="https://microbadger.com/images/oanhnn/php:7.4-fpm-alpine" title="7.4-fpm-alpine"><img src="https://images.microbadger.com/badges/version/oanhnn/php:7.4-fpm-alpine.svg" alt="7.4-fpm-alpine"/></a>
       <a href="https://travis-ci.org/oanhnn/docker-php" title="7.4-fpm-alpine"><img src="https://travis-ci.org/oanhnn/docker-php.svg?branch=7.4-fpm-alpine" alt="7.4-fpm-alpine"/></a>
     </td>
   </tr>
