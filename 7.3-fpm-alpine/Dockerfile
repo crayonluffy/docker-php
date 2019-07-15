@@ -1,7 +1,7 @@
 FROM php:7.3-fpm-alpine
 
 # Install some packages
-RUN apk add --update --no-cache curl fcgi
+RUN apk add --update --no-cache curl
 
 # Install build dependency packages
 RUN apk add --update --no-cache --virtual .build-deps \
